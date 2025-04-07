@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Vibefind</title>
+  <link rel="stylesheet" href="styles/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="vibefind-container header-content">
+      <a href="index.html" class="logo">
+        <i class="fas fa-map-marked-alt logo-icon"></i>
+        <span class="logo-text">Vibefind</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="login.html" class="nav-link">Login</a></li>
+          <li><a href="signup.html" class="nav-link">Sign up</a></li>
+          <li><a href="profile.html" class="nav-link active">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="profile-page page-transition">
+    <div class="vibefind-container">
+      <div class="profile-header glass-panel">
+        <div class="profile-info">
+          <!-- Replace the existing profile-avatar div -->
+        <div class="profile-avatar">
+          <input type="file" id="avatarUpload" accept="image/*" hidden>
+          <label for="avatarUpload" class="avatar-upload-label">
+            <img src="https://via.placeholder.com/150" alt="User Avatar" id="profileAvatar">
+            <span class="upload-hover-text">Click to upload</span>
+          </label>
+        </div>
+          <div class="profile-details">
+            <h1 id="profileName">Guest</h1>
+            <p id="profileJoinDate">Joined January 2023</p>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <button class="vibe-button" id="editProfileBtn">Edit Profile</button>
+          <button id="logoutButton" class="text-button">Logout</button>
+        </div>
+      </div>
+      
+      <div class="profile-tabs">
+        <button class="tab-button active" data-tab="upcoming">Upcoming Events</button>
+        <button class="tab-button" data-tab="past">Past Events</button>
+        <button class="tab-button" data-tab="saved">Saved Events</button>
+        <button class="tab-button" data-tab="settings">Settings</button>
+      </div>
+      
+      <div class="tab-content">
+        <div id="upcoming" class="tab-pane active">
+          <h2>Your Upcoming Events</h2>
+          
+          <div class="events-grid" id="upcomingEventsGrid">
+            <div class="event-card glass-panel">
+              <div class="event-image">
+                <img src="https://via.placeholder.com/400x200" alt="Event">
+              </div>
+              <div class="event-details">
+                <h3>Summer Music Festival</h3>
+                <p class="event-date">June 15, 2023 • 3:00 PM</p>
+                <p class="event-location">Central Park, New York</p>
+                <button class="vibe-button sm">View Details</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="create-event-prompt">
+            <p>Want to host your own event?</p>
+            <a href="create-event.html" class="vibe-button sm">Create Event</a>
+          </div>
+        </div>
+        
+        <div id="past" class="tab-pane">
+          <h2>Your Past Events</h2>
+          
+          <div class="events-grid" id="pastEventsGrid">
+            <div class="event-card glass-panel past-event">
+              <div class="event-image">
+                <img src="https://via.placeholder.com/400x200" alt="Event">
+              </div>
+              <div class="event-details">
+                <h3>Winter Jazz Night</h3>
+                <p class="event-date">December 12, 2022 • 8:00 PM</p>
+                <p class="event-location">Blue Note, Chicago</p>
+                <div class="event-rating">
+                  <p>Your rating: ★★★★☆</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="saved" class="tab-pane">
+          <h2>Your Saved Events</h2>
+          
+          <div class="events-grid" id="savedEventsGrid">
+            <div class="event-card glass-panel">
+              <div class="event-image">
+                <img src="https://via.placeholder.com/400x200" alt="Event">
+              </div>
+              <div class="event-details">
+                <h3>Food & Wine Festival</h3>
+                <p class="event-date">August 20, 2023 • 12:00 PM</p>
+                <p class="event-location">Waterfront Park, Seattle</p>
+                <button class="vibe-button sm">Get Tickets</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="settings" class="tab-pane">
+          <h2>Profile Settings</h2>
+          
+          <form id="settingsForm" class="settings-form glass-panel">
+            <div class="form-section">
+              <h3>Personal Information</h3>
+              
+              <div class="form-group">
+                <label for="settingsName">Name</label>
+                <input type="text" id="settingsName" class="form-input" value="">
+              </div>
+              
+              <div class="form-group">
+                <label for="settingsEmail">Email</label>
+                <input type="email" id="settingsEmail" class="form-input" value="">
+              </div>
+              
+              <div class="form-group">
+                <label for="settingsLocation">Location</label>
+                <input type="text" id="settingsLocation" class="form-input" value="">
+              </div>
+            </div>
+            
+            <div class="form-section">
+              <h3>Preferences</h3>
+              
+              <div class="form-group">
+                <label>Event Categories</label>
+                <div class="checkbox-group">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="catMusic">
+                    <label for="catMusic">Music</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="catTech">
+                    <label for="catTech">Technology</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="catFood">
+                    <label for="catFood">Food & Drink</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="catSports">
+                    <label for="catSports">Sports</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Notification Preferences</label>
+                <div class="checkbox-group">
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="notifyEmail">
+                    <label for="notifyEmail">Email Notifications</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input type="checkbox" id="notifyPush">
+                    <label for="notifyPush">Push Notifications</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button type="submit" class="vibe-button">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="scripts/profile.js"></script>
+</body>
+</html>

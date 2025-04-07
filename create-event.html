@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Event - Vibefind</title>
+  <link rel="stylesheet" href="styles\create-event.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="vibefind-container header-content">
+      <a href="index.html" class="logo">
+        <i class="fas fa-map-marked-alt logo-icon"></i>
+        <span class="logo-text">Vibefind</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+          <li><a href="login.html" class="nav-link">Login</a></li>
+          <li><a href="signup.html" class="nav-link">Sign up</a></li>
+          <li><a href="profile.html" class="nav-link">Profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="create-event-page page-transition">
+    <div class="vibefind-container">
+      <div class="page-header">
+        <h1>Create New Event</h1>
+        <p>Share your vibe with the community</p>
+      </div>
+      
+      <form id="createEventForm" class="create-event-form glass-panel">
+        <div class="form-section">
+          <h3>Event Details</h3>
+          
+          <div class="form-group">
+            <label for="eventTitle">Event Title*</label>
+            <input type="text" id="eventTitle" class="form-input" placeholder="Enter a descriptive title" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="eventDescription">Description*</label>
+            <textarea id="eventDescription" class="form-input" rows="4" placeholder="Tell people what your event is about" required></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eventCategory">Category*</label>
+              <select id="eventCategory" class="form-input" required>
+                <option value="">Select a category</option>
+                <option value="music">Music</option>
+                <option value="tech">Technology</option>
+                <option value="food">Food & Drink</option>
+                <option value="sports">Sports</option>
+                <option value="art">Art & Culture</option>
+                <option value="networking">Networking</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="eventCapacity">Capacity</label>
+              <input type="number" id="eventCapacity" class="form-input" placeholder="Max number of attendees">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3>Date & Location</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eventDate">Date*</label>
+              <input type="date" id="eventDate" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="eventTime">Time*</label>
+              <input type="time" id="eventTime" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="eventLocation">Location*</label>
+            <input type="text" id="eventLocation" class="form-input" placeholder="Enter the venue name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="eventAddress">Address*</label>
+            <input type="text" id="eventAddress" class="form-input" placeholder="Street address, City, State, Zip" required>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3>Event Image</h3>
+          
+          <div class="form-group">
+            <label for="eventImage">Upload Image</label>
+            <input type="file" id="eventImage" class="form-input file-input" accept="image/*">
+            
+            <div class="image-preview" id="imagePreview">
+              <p>No image selected</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3>Pricing</h3>
+          
+          <div class="form-group">
+            <div class="radio-group">
+              <div class="radio-item">
+                <input type="radio" id="eventFree" name="eventPrice" value="free" checked>
+                <label for="eventFree">Free Event</label>
+              </div>
+              
+              <div class="radio-item">
+                <input type="radio" id="eventPaid" name="eventPrice" value="paid">
+                <label for="eventPaid">Paid Event</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group price-input" id="priceInputGroup" style="display: none;">
+            <label for="eventPriceAmount">Ticket Price ($)</label>
+            <input type="number" id="eventPriceAmount" class="form-input" placeholder="0.00" step="0.01">
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="vibe-button">Create Event</button>
+          <button type="button" class="text-button" id="cancelButton">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="scripts/create-event.js"></script>
+</body>
+</html>
