@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Events - Vibefind</title>
+    <link rel="stylesheet" href="../css/my-events.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="../assets/images/logo.png" type="image/png" />
+    <style>
+      #edit-event-form .form-group {
+        margin-bottom: 15px;
+      }
+
+      #edit-event-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      #edit-event-form input,
+      #edit-event-form textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      #edit-event-form textarea {
+        height: 100px;
+        resize: vertical;
+      }
+
+      #edit-event-form button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../assets/images/logo.png"
+            type="image/png"
+            class="logo-img"
+          />
+          <h1>Vibefind</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="create-event.html">Create Event</a></li>
+            <li><a href="my-events.html" class="active">My Events</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <div class="profile-dropdown">
+            <img
+              src="../assets/images/default-profile.png"
+              alt="Profile"
+              id="profile-image"
+            />
+            <div class="dropdown-content">
+              <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+              <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+              <a href="#" id="logout-btn"
+                ><i class="fas fa-sign-out-alt"></i> Logout</a
+              >
+            </div>
+          </div>
+          <button id="login-btn" class="btn-secondary">Login</button>
+          <button id="signup-btn" class="btn-primary">Sign Up</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero-banner">
+          <div class="hero-content">
+            <h1>My Events</h1>
+            <p>Manage the events you've created</p>
+          </div>
+        </section>
+
+        <div id="login-required" class="login-required">
+          <i class="fas fa-lock"></i>
+          <h2>Login Required</h2>
+          <p>Please login or create an account to view your events.</p>
+          <div class="login-buttons">
+            <button id="login-redirect" class="btn-primary">Login</button>
+            <button id="signup-redirect" class="btn-secondary">Sign Up</button>
+          </div>
+        </div>
+
+        <section
+          id="my-events-section"
+          class="my-events-section"
+          style="display: none"
+        >
+          <div class="section-header">
+            <h2>My Created Events</h2>
+            <a href="create-event.html" class="btn-primary create-new-btn">
+              <i class="fas fa-plus"></i> Create New Event
+            </a>
+          </div>
+
+          <div id="my-events-container" class="event-grid">
+            <!-- Events will be loaded here dynamically -->
+          </div>
+
+          <div id="no-events" class="no-events" style="display: none">
+            <i class="fas fa-calendar-times"></i>
+            <h3>No Events Found</h3>
+            <p>You haven't created any events yet.</p>
+            <a href="create-event.html" class="btn-primary"
+              >Create Your First Event</a
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Vibefind</h3>
+            <p>
+              Discover events that match your vibe - concerts, workshops,
+              festivals, and more!
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="create-event.html">Create Event</a></li>
+              <li><a href="my-events.html">My Events</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>Email: info@vibefind.com</p>
+            <p>Phone: +91 98765 43210</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Vibefind. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <p>
+          Don't have an account? <a href="#" id="switch-to-signup">Sign up</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" id="signup-confirm-password" required />
+          </div>
+          <div class="form-group captcha-container">
+            <label>CAPTCHA</label>
+            <div class="captcha">
+              <span id="captcha-text"></span>
+              <button type="button" id="refresh-captcha">
+                <i class="fas fa-sync-alt"></i>
+              </button>
+            </div>
+            <input
+              type="text"
+              id="captcha-input"
+              placeholder="Enter CAPTCHA"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+        <p>
+          Already have an account? <a href="#" id="switch-to-login">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Event Action Modal -->
+    <div id="event-action-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Manage Event</h2>
+        <div class="event-action-buttons">
+          <button id="edit-event-btn" class="btn-primary">
+            <i class="fas fa-edit"></i> Edit Event
+          </button>
+          <button id="delete-event-btn" class="btn-danger">
+            <i class="fas fa-trash"></i> Delete Event
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-confirm-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <div class="delete-confirm">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h2>Delete Event?</h2>
+          <p>
+            Are you sure you want to delete this event? This action cannot be
+            undone.
+          </p>
+          <div class="delete-buttons">
+            <button id="cancel-delete" class="btn-secondary">Cancel</button>
+            <button id="confirm-delete" class="btn-secondary">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Event Modal -->
+    <div id="edit-event-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Edit Event</h2>
+        <form id="edit-event-form">
+          <div class="form-group">
+            <label for="edit-title">Event Title</label>
+            <input type="text" id="edit-title" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-description">Description</label>
+            <textarea id="edit-description" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="edit-date">Date</label>
+            <input type="date" id="edit-date" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-time">Time</label>
+            <input type="time" id="edit-time" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-location">Location</label>
+            <input type="text" id="edit-location" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-price">Price</label>
+            <input
+              type="text"
+              id="edit-price"
+              placeholder="e.g., Free or $10"
+            />
+          </div>
+          <div class="form-group">
+            <label for="edit-image">Event Image URL</label>
+            <input type="url" id="edit-image" placeholder="Enter image URL" />
+          </div>
+          <button type="submit" class="btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/my-events.js"></script>
+  </body>
+</html>

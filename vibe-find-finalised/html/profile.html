@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - Vibefind</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="../assets/images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../assets/images/logo.png"
+            type="image/png"
+            class="logo-img"
+          />
+          <h1>Vibefind</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="create-event.html">Create Event</a></li>
+            <li><a href="my-events.html">My Events</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <div class="profile-dropdown">
+            <img
+              src="../assets/images/default-profile.png"
+              alt="Profile"
+              id="profile-image"
+            />
+            <div class="dropdown-content">
+              <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+              <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+              <a href="#" id="logout-btn"
+                ><i class="fas fa-sign-out-alt"></i> Logout</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Profile Section -->
+    <main>
+      <div class="container">
+        <div class="profile-container">
+          <!-- Profile Banner -->
+          <div class="profile-banner">
+            <h1>My Profile</h1>
+            <p>Manage your personal information and preferences</p>
+          </div>
+
+          <!-- Profile Content -->
+          <div class="profile-content">
+            <!-- Profile Sidebar -->
+            <div class="profile-sidebar">
+              <div class="profile-picture-container">
+                <img
+                  id="profile-picture"
+                  src="../assets/images/default-profile.png"
+                  alt="Profile Picture"
+                />
+                <button id="change-picture-btn">
+                  <i class="fas fa-camera"></i> Change Picture
+                </button>
+              </div>
+              <div class="profile-menu">
+                <a href="#personal-info" class="active"
+                  ><i class="fas fa-user"></i> Personal Information</a
+                >
+                <a href="#bookings"
+                  ><i class="fas fa-ticket-alt"></i> My Bookings</a
+                >
+                <a href="#wishlist"><i class="fas fa-heart"></i> Wishlist</a>
+                <a href="#security"
+                  ><i class="fas fa-shield-alt"></i> Security</a
+                >
+              </div>
+            </div>
+
+            <!-- Profile Details -->
+            <div class="profile-details">
+              <!-- Personal Information Section -->
+              <div id="personal-info" class="profile-section active">
+                <div class="section-header">
+                  <h2>Personal Information</h2>
+                  <button id="edit-profile-btn" class="btn-secondary">
+                    <i class="fas fa-edit"></i> Edit
+                  </button>
+                </div>
+
+                <div id="profile-info-display">
+                  <div class="info-row">
+                    <div class="info-label">Name</div>
+                    <div class="info-value" id="profile-name">Loading...</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Email</div>
+                    <div class="info-value" id="profile-email">Loading...</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Phone</div>
+                    <div class="info-value" id="profile-phone">
+                      Not provided
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Location</div>
+                    <div class="info-value" id="profile-location">
+                      Not provided
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Bio</div>
+                    <div class="info-value" id="profile-bio">Not provided</div>
+                  </div>
+                  <div class="info-row">
+                    <div class="info-label">Joined</div>
+                    <div class="info-value" id="profile-joined">Loading...</div>
+                  </div>
+                </div>
+
+                <div id="profile-info-edit" style="display: none">
+                  <form id="profile-edit-form">
+                    <div class="form-group">
+                      <label for="edit-name">Name</label>
+                      <input type="text" id="edit-name" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="edit-email">Email</label>
+                      <input type="email" id="edit-email" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="edit-phone">Phone</label>
+                      <input type="tel" id="edit-phone" />
+                    </div>
+                    <div class="form-group">
+                      <label for="edit-location">Location</label>
+                      <input type="text" id="edit-location" />
+                    </div>
+                    <div class="form-group">
+                      <label for="edit-bio">Bio</label>
+                      <textarea id="edit-bio" rows="4"></textarea>
+                    </div>
+                    <div class="form-actions">
+                      <button
+                        type="button"
+                        id="cancel-edit-btn"
+                        class="btn-secondary"
+                      >
+                        Cancel
+                      </button>
+                      <button type="submit" class="btn-primary">
+                        Save Changes
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Bookings Section -->
+              <div id="bookings" class="profile-section">
+                <div class="section-header">
+                  <h2>My Bookings</h2>
+                </div>
+
+                <div class="booking-list" id="booking-list">
+                  <!-- Bookings will be loaded here -->
+                  <div class="no-bookings" id="no-bookings">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>No Bookings Yet</h3>
+                    <p>
+                      You haven't booked any events yet. Browse our events and
+                      book your favorites!
+                    </p>
+                    <a href="events.html" class="btn-primary">Explore Events</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wishlist Section -->
+              <div id="wishlist" class="profile-section">
+                <div class="section-header">
+                  <h2>My Wishlist</h2>
+                </div>
+
+                <div class="wishlist-events" id="wishlist-events">
+                  <!-- Wishlist events will be loaded here -->
+                  <div class="no-wishlist" id="no-wishlist">
+                    <i class="fas fa-heart"></i>
+                    <h3>Your Wishlist is Empty</h3>
+                    <p>
+                      Save your favorite events to your wishlist for quick
+                      access later!
+                    </p>
+                    <a href="events.html" class="btn-primary">Explore Events</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Security Section -->
+              <div id="security" class="profile-section">
+                <div class="section-header">
+                  <h2>Security</h2>
+                </div>
+
+                <div class="change-password">
+                  <h3>Change Password</h3>
+                  <form id="password-form">
+                    <div class="form-group">
+                      <label for="current-password">Current Password</label>
+                      <input type="password" id="current-password" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="new-password">New Password</label>
+                      <input type="password" id="new-password" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="confirm-password">Confirm New Password</label>
+                      <input type="password" id="confirm-password" required />
+                    </div>
+                    <div class="password-strength" id="password-strength">
+                      <div class="strength-label">Password Strength:</div>
+                      <div class="strength-meter">
+                        <div class="strength-bar" id="strength-bar"></div>
+                      </div>
+                      <div class="strength-text" id="strength-text">Weak</div>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                      Update Password
+                    </button>
+                  </form>
+                </div>
+
+                <div class="danger-zone">
+                  <h3>Danger Zone</h3>
+                  <button id="delete-account-btn" class="btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete Account
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Vibefind</h3>
+            <p>
+              Discover events that match your vibe - concerts, workshops,
+              festivals, and more!
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="create-event.html">Create Event</a></li>
+              <li><a href="my-events.html">My Events</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>Email: info@vibefind.com</p>
+            <p>Phone: +91 98765 43210</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Vibefind. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login to Your Account</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Login</button>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <p>
+            Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create an Account</h2>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" id="signup-confirm-password" required />
+          </div>
+          <div class="form-group captcha-group">
+            <label>CAPTCHA</label>
+            <div class="captcha">
+              <span id="captcha-text"></span>
+              <button type="button" id="refresh-captcha">
+                <i class="fas fa-redo-alt"></i>
+              </button>
+            </div>
+            <input
+              type="text"
+              id="captcha-input"
+              placeholder="Enter the CAPTCHA text"
+              required
+            />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Sign Up</button>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <p>
+            Already have an account? <a href="#" id="switch-to-login">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Account Confirmation Modal -->
+    <div id="delete-account-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="delete-confirm">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h2>Delete Your Account?</h2>
+          <p>
+            This action cannot be undone. All your data, including bookings,
+            created events, and personal information will be permanently
+            deleted.
+          </p>
+          <div class="delete-buttons">
+            <button id="cancel-delete-btn" class="btn-secondary">Cancel</button>
+            <button id="confirm-delete-btn" class="btn-danger">
+              Delete Account
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Change Profile Picture Modal -->
+    <div id="change-picture-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Change Profile Picture</h2>
+        <div class="profile-picture-options">
+          <div class="picture-preview">
+            <img
+              id="picture-preview"
+              src="../assets/images/default-profile.png"
+              alt="Profile Picture Preview"
+            />
+          </div>
+          <div class="picture-options">
+            <button id="upload-picture-btn" class="btn-secondary">
+              <i class="fas fa-upload"></i> Upload Image
+            </button>
+            <input
+              type="file"
+              id="picture-upload"
+              accept="image/*"
+              style="display: none"
+            />
+            <button id="use-default-picture-btn" class="btn-secondary">
+              <i class="fas fa-user-circle"></i> Use Default
+            </button>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button id="cancel-picture-btn" class="btn-secondary">Cancel</button>
+          <button id="save-picture-btn" class="btn-primary">
+            Save Picture
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="../js/index.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+/* Importing base styles from index.css */
+@import url('index.css');
+
+/* About Page Specific Styles */
+
+.logo {
+    display: flex;          /* Enable flexbox */
+    align-items: center;    /* Vertically center items */
+    gap: 10px;             /* Space between logo and text */
+}
+
+
+.logo-img {
+    width: 40px;  /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.hero-banner {
+    background: linear-gradient(rgba(74, 111, 165, 0.8), rgba(74, 111, 165, 0.8)), url('../img/about-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.section-divider {
+    height: 3px;
+    width: 60px;
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Our Mission Section */
+.our-mission {
+    padding: 4rem 0;
+    background-color: var(--light-color);
+}
+
+.mission-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.mission-item {
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mission-item:hover {
+    transform: translateY(-10px);
+}
+
+.mission-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 3px dashed var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    background-color: white;
+    padding: 8px; /* Creates the white space */
+    overflow: hidden; /* Ensures the image stays within the circle */
+}
+
+.mission-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.icon-image {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid white;
+    filter: brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.mission-icon i {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.mission-item:hover .mission-img {
+    transform: scale(1.1);
+}
+
+
+.mission-item:hover .icon-image {
+    filter: brightness(0.7);
+}
+
+.mission-item:hover .mission-icon i {
+    opacity: 1;
+}
+
+.mission-item h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.mission-image {
+    width : 80px;
+}
+
+/* Our Team Section */
+.our-team {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 300px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.05);
+}
+
+.team-member h3, .team-member p {
+    padding: 0 1.5rem;
+}
+
+.team-member h3 {
+    margin: 1.5rem 0 0.5rem;
+    color: var(--primary-color);
+}
+
+.member-role {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.member-bio {
+    color: var(--grey-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.member-social {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.member-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.member-social a:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Journey Stats Section */
+.journey-stats {
+    padding: 4rem 0;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.journey-stats .section-header h2 {
+    color: white;
+}
+
+.journey-stats .section-divider {
+    background-color: white;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .story-content {
+        flex-direction: column;
+    }
+
+    .story-image, .story-text {
+        flex: none;
+        width: 100%;
+    }
+
+    .mission-content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-member {
+        width: 100%;
+        max-width: 350px;
+    }
+}

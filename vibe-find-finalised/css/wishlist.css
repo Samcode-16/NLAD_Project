@@ -1,0 +1,459 @@
+/* Importing base styles from index.css */
+@import url("index.css");
+
+/* Wishlist Page Specific Styles */
+.logo {
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Space between logo and text */
+}
+
+.logo-img {
+  width: 40px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logo h1 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.wishlist-banner {
+  background: linear-gradient(rgba(74, 111, 165, 0.7), rgba(74, 111, 165, 0.85)),
+    url("../img/events-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 0;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.wishlist-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-banner p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Login Required Section */
+.login-required {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2.5rem;
+}
+
+.login-required i {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.login-required h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-grey);
+}
+
+.login-required p {
+  font-size: 1.1rem;
+  color: var(--grey-color);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Wishlist Content */
+.wishlist-content {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.wishlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.wishlist-header h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.wishlist-count {
+  color: var(--grey-color);
+  font-weight: normal;
+}
+
+/* Wishlist Grid */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Event Card Styles */
+.event-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid var(--light-grey);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.05);
+}
+
+.event-details {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-date {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.event-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  line-height: 1.4;
+}
+
+.event-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--grey-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.event-category {
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: var(--primary-color);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.event-description {
+  color: var(--grey-color);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.event-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.book-now-btn {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 111, 165, 0.2);
+}
+
+/* Remove Wishlist Button */
+.remove-wishlist {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #ef4444;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.remove-wishlist:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Event Badge */
+.event-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+  z-index: 10;
+}
+
+.event-badge.free {
+  background-color: #10b981;
+}
+
+.event-badge.paid {
+  background-color: #6366f1;
+}
+
+/* No Wishlist Items */
+.no-wishlist-items {
+  text-align: center;
+  padding: 4rem 0;
+  display: none;
+}
+
+.no-wishlist-items i {
+  font-size: 4rem;
+  color: var(--light-grey);
+  margin-bottom: 1.5rem;
+}
+
+.no-wishlist-items h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--dark-grey);
+}
+
+.no-wishlist-items p {
+  font-size: 1.1rem;
+  color: var(--grey-color);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Delete Confirmation Modal */
+.delete-confirm {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.delete-confirm i {
+  font-size: 3rem;
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.delete-confirm h2 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-grey);
+}
+
+.delete-confirm p {
+  margin-bottom: 2rem;
+  color: var(--grey-color);
+}
+
+.delete-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wishlist-banner {
+    padding: 3rem 0;
+  }
+
+  .wishlist-banner h1 {
+    font-size: 2rem;
+  }
+
+  .wishlist-content {
+    padding: 1.5rem;
+  }
+
+  .wishlist-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  #clear-wishlist-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .login-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .login-buttons button {
+    width: 100%;
+  }
+
+  .delete-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .delete-buttons button {
+    width: 100%;
+  }
+}
+
+.wishlist-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-box {
+  position: relative;
+  width: 300px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.search-box i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.no-search-results {
+  text-align: center;
+  padding: 3rem 0;
+  display: none;
+}
+
+.no-search-results i {
+  font-size: 3rem;
+  color: var(--light-grey);
+  margin-bottom: 1rem;
+}
+
+.no-search-results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-grey);
+}
+
+.no-search-results p {
+  font-size: 1rem;
+  color: var(--grey-color);
+  max-width: 400px;
+  margin: 0 auto;
+}

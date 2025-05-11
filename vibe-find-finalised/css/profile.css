@@ -1,0 +1,556 @@
+/* Importing base styles from index.css */
+@import url('index.css');
+
+.logo {
+    display: flex;          /* Enable flexbox */
+    align-items: center;    /* Vertically center items */
+    gap: 10px;             /* Space between logo and text */
+}
+
+
+.logo-img {
+    width: 40px;  /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Profile Page Specific Styles */
+/* Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 0;
+}
+
+.dropdown-content a {
+    color: var(--dark-color);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-grey);
+    color: var(--primary-color);
+}
+
+.dropdown-content a i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Show dropdown when active */
+.profile-dropdown.active .dropdown-content {
+    display: block;
+}
+
+.profile-banner {
+    background: linear-gradient(rgba(74, 111, 165, 0.7), rgba(74, 111, 165, 0.85));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-banner p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.profile-content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+    flex: 0 0 300px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-picture-container {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.profile-picture-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.profile-picture-container button {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.profile-picture-container button:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.profile-menu {
+    padding: 1rem 0;
+}
+
+.profile-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark-grey);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.profile-menu a:hover, .profile-menu a.active {
+    background-color: rgba(74, 111, 165, 0.1);
+    color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.profile-menu a i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Profile Details */
+.profile-details {
+    flex: 1;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-section {
+    display: none;
+    padding: 2rem;
+}
+
+.profile-section.active {
+    display: block;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Personal Information */
+.info-row {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.info-label {
+    flex: 0 0 150px;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+
+.info-value {
+    flex: 1;
+    color: var(--grey-color);
+}
+
+/* Profile Edit Form */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* My Bookings */
+.booking-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.booking-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-grey);
+}
+
+.booking-event-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-grey);
+}
+
+.booking-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.booking-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--grey-color);
+}
+
+.booking-detail i {
+    color: var(--primary-color);
+    width: 16px;
+}
+
+.booking-ticket {
+    margin-top: auto;
+    text-align: center;
+}
+
+.booking-qr {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.booking-id {
+    font-size: 0.8rem;
+    color: var(--grey-color);
+    margin-bottom: 1rem;
+}
+
+.no-bookings, .no-wishlist {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.no-bookings i, .no-wishlist i {
+    font-size: 3rem;
+    color: var(--light-grey);
+    margin-bottom: 1rem;
+}
+
+.no-bookings h3, .no-wishlist h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-grey);
+}
+
+.no-bookings p, .no-wishlist p {
+    color: var(--grey-color);
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Wishlist in Profile */
+.wishlist-events {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Security Section */
+.change-password {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.change-password h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-grey);
+}
+
+.password-strength {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.strength-label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--grey-color);
+}
+
+.strength-meter {
+    height: 8px;
+    background-color: var(--light-grey);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 20%;
+    background-color: #dc3545;
+    border-radius: 4px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-text {
+    font-size: 0.9rem;
+    color: #dc3545;
+}
+
+.danger-zone {
+    background-color: #fff8f8;
+    border: 1px solid #ffcccc;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.danger-zone h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #dc3545;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Modal Styles for Profile Picture */
+.profile-picture-options {
+    margin-bottom: 2rem;
+}
+
+.picture-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--primary-color);
+}
+
+.picture-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Delete Account Modal */
+.delete-confirm {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.delete-confirm i {
+    font-size: 3rem;
+    color: #dc3545;
+    margin-bottom: 1rem;
+}
+
+.delete-confirm h2 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-grey);
+}
+
+.delete-confirm p {
+    margin-bottom: 2rem;
+    color: var(--grey-color);
+}
+
+.delete-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .profile-content {
+        flex-direction: column;
+    }
+    
+    .profile-sidebar {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-banner {
+        padding: 3rem 0;
+    }
+    
+    .profile-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .booking-list, .wishlist-events {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-label {
+        margin-bottom: 0.5rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-section {
+        padding: 1.5rem;
+    }
+    
+    .change-password, .danger-zone {
+        padding: 1.5rem;
+    }
+    
+    .delete-buttons, .form-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .delete-buttons button, .form-actions button {
+        width: 100%;
+    }
+    
+    .picture-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}

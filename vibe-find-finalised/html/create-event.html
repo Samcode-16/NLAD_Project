@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event - Vibefind</title>
+    <link rel="stylesheet" href="../css/create-event.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="../assets/images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../assets/images/logo.png"
+            type="image/png"
+            class="logo-img"
+          />
+          <h1>Vibefind</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="create-event.html" class="active">Create Event</a></li>
+            <li><a href="my-events.html">My Events</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <div class="profile-dropdown">
+            <img
+              src="../assets/images/default-profile.png"
+              alt="Profile"
+              id="profile-image"
+            />
+            <div class="dropdown-content">
+              <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+              <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+              <a href="#" id="logout-btn"
+                ><i class="fas fa-sign-out-alt"></i> Logout</a
+              >
+            </div>
+          </div>
+          <button id="login-btn" class="btn-secondary">Login</button>
+          <button id="signup-btn" class="btn-primary">Sign Up</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero-banner">
+          <div class="hero-content">
+            <h1>Create Your Own Event</h1>
+            <p>
+              Share your passion with the world by hosting an event that brings
+              people together !
+            </p>
+          </div>
+        </section>
+
+        <div id="login-required" class="login-required" style="display: none">
+          <i class="fas fa-lock"></i>
+          <h2>Login Required</h2>
+          <p>Please login or create an account to create an event.</p>
+          <div class="login-buttons">
+            <button id="login-redirect" class="btn-primary">Login</button>
+            <button id="signup-redirect" class="btn-secondary">Sign Up</button>
+          </div>
+        </div>
+
+        <section id="create-event-form" class="create-event-form">
+          <h2>Event Details</h2>
+          <p class="form-subtitle">
+            Fill in the information below to create your event
+          </p>
+
+          <form id="event-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="event-title"
+                  >Event Title <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="event-title"
+                  required
+                  placeholder="Give your event a catchy title"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="event-category"
+                  >Category <span class="required">*</span></label
+                >
+                <select id="event-category" required>
+                  <option value="">Select a category</option>
+                  <option value="Music">Music</option>
+                  <option value="Cultural">Cultural</option>
+                  <option value="Food">Food & Drink</option>
+                  <option value="Business">Business</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Education">Education</option>
+                  <option value="Tech and coding">Tech and coding</option>
+                  <option value="Standup comedies">Standup comedies</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="event-date"
+                  >Date <span class="required">*</span></label
+                >
+                <input type="date" id="event-date" required />
+              </div>
+
+              <div class="form-group">
+                <label for="event-time"
+                  >Time <span class="required">*</span></label
+                >
+                <input type="time" id="event-time" required />
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="event-location"
+                  >Location <span class="required">*</span></label
+                >
+                <select id="event-location" required>
+                  <option value="">Select a Location</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Bhubaneswar">Bhubaneswar</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Coimbatore">Coimbatore</option>
+                  <option value="Coorg">Coorg</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gurgaon">Gurgaon</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Ladakh">Ladakh</option>
+                  <option value="Lucknow">Lucknow</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Ooty">Ooty</option>
+                  <option value="Patna">Patna</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Ranchi">Ranchi</option>
+                  <option value="Rishikesh">Rishikesh</option>
+                  <option value="Udaipur">Udaipur</option>
+                  <option value="Varanasi">Varanasi</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="event-price-type"
+                  >Pricing <span class="required">*</span></label
+                >
+                <select id="event-price-type" required>
+                  <option value="">Select pricing type</option>
+                  <option value="free">Free</option>
+                  <option value="paid">Paid</option>
+                </select>
+              </div>
+
+              <div
+                class="form-group"
+                id="price-input-container"
+                style="display: none"
+              >
+                <label for="event-price"
+                  >Price (₹) <span class="required">*</span></label
+                >
+                <input
+                  type="number"
+                  id="event-price"
+                  placeholder="Enter ticket price in ₹"
+                />
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="event-description"
+                  >Description <span class="required">*</span></label
+                >
+                <textarea
+                  id="event-description"
+                  rows="5"
+                  required
+                  placeholder="Describe your event, what attendees can expect, and why they should attend"
+                ></textarea>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="event-image"
+                  >Event Image <span class="required">*</span></label
+                >
+                <div class="image-upload-container">
+                  <div id="image-preview" class="image-preview">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop an image or click to browse</p>
+                    <span>Recommended size: 1200 x 800 pixels (3:2 ratio)</span>
+                  </div>
+                  <input
+                    type="file"
+                    id="event-image"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="terms-checkbox">
+              <input type="checkbox" id="terms-agree" required />
+              <label for="terms-agree"
+                >I agree to the <a href="#">Terms and Conditions</a> and
+                <a href="#">Community Guidelines</a></label
+              >
+            </div>
+
+            <div class="form-buttons">
+              <button type="button" id="preview-btn" class="btn-secondary">
+                Preview Event
+              </button>
+              <button type="submit" class="btn-primary">Create Event</button>
+            </div>
+          </form>
+        </section>
+
+        <div id="event-preview-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Event Preview</h2>
+            <div class="event-preview">
+              <div class="preview-image">
+                <img
+                  id="preview-image"
+                  src="../assets/images/placeholder-event.jpg"
+                  alt="Event"
+                />
+              </div>
+              <div class="preview-details">
+                <div id="preview-date" class="preview-date">Date & Time</div>
+                <h3 id="preview-title">Event Title</h3>
+                <div id="preview-location" class="preview-location">
+                  <i class="fas fa-map-marker-alt"></i> Location
+                </div>
+                <p id="preview-description">
+                  Event description will appear here.
+                </p>
+                <div class="preview-footer">
+                  <div id="preview-price" class="preview-price">Price</div>
+                  <div id="preview-category" class="preview-category">
+                    Category
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="success-modal" class="modal">
+          <div class="modal-content success-content">
+            <span class="close">&times;</span>
+            <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Event Created Successfully!</h2>
+            <p>Your event has been created and is now live on Vibefind.</p>
+            <div class="success-buttons">
+              <a href="events.html" class="btn-secondary">View All Events</a>
+              <a
+                href="my-events.html"
+                id="view-created-event"
+                class="btn-primary"
+                >View Your Event</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Vibefind</h3>
+            <p>
+              Discover events that match your vibe - concerts, workshops,
+              festivals, and more!
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="create-event.html">Create Event</a></li>
+              <li><a href="my-events.html">My Events</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>Email: info@vibefind.com</p>
+            <p>Phone: +91 98765 432XX</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Vibefind. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <p>
+          Don't have an account? <a href="#" id="switch-to-signup">Sign up</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm-password">Confirm Password</label>
+            <input type="password" id="signup-confirm-password" required />
+          </div>
+          <div class="form-group captcha-container">
+            <label>CAPTCHA</label>
+            <div class="captcha">
+              <span id="captcha-text"></span>
+              <button type="button" id="refresh-captcha">
+                <i class="fas fa-sync-alt"></i>
+              </button>
+            </div>
+            <input
+              type="text"
+              id="captcha-input"
+              placeholder="Enter CAPTCHA"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+        <p>
+          Already have an account? <a href="#" id="switch-to-login">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="../js/create-event.js"></script>
+  </body>
+</html>

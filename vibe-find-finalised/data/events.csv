@@ -1,0 +1,101 @@
+id,title,date,time,location,description,price,image,category
+1,Diwali Cultural Festival,2025-04-25,18:00,Mumbai Maharashtra,Join us for a celebration of lights with music dance and traditional Indian food.,Free,img/diwali-festival.jpeg,Cultural
+2,Tech Conference 2025,2025-05-15,09:00,Bangalore Karnataka,The biggest tech conference in India featuring industry leaders and innovative startups.,₹1500,img/tech-conference.jpg,Business
+3,Classical Music Concert,2025-06-10,19:30,Delhi NCR,An evening of classical Indian music featuring renowned musicians from across the country.,₹800,img/classical-music.jpg,Music
+4,Food & Wine Festival,2025-05-20,12:00,Chennai Tamil Nadu,Taste the finest cuisines and wines from different regions of India.,₹1200,img/food-festival.jpg,Food
+5,Business Networking Event,2025-06-05,17:00,Hyderabad Telangana,Connect with entrepreneurs and business professionals from various industries.,₹500,img/business-event.jpg,Business
+6,Cricket Tournament Finals,2025-07-12,14:00,Kolkata West Bengal,Watch the exciting finals of the inter-state cricket tournament.,₹300,img/cricket-tournament.jpg,Sports
+7,Art Exhibition,2025-05-10,10:00,Jaipur Rajasthan,Explore contemporary and traditional Indian art by renowned artists.,₹200,img/art-exhibition.jpg,Cultural
+8,Dance Workshop,2025-06-15,16:00,Pune Maharashtra,Learn traditional and modern dance forms from expert choreographers.,₹600,img/dance-workshop.jpg,Cultural
+9,Yoga & Meditation Retreat,2025-05-25,07:00,Rishikesh Uttarakhand,A weekend retreat focusing on yoga meditation and spiritual well-being.,₹2500,img/yoga-retreat.jpg,Cultural
+10,Startup Pitch Competition,2025-06-30,10:00,Bangalore Karnataka,Entrepreneurs pitch their innovative ideas to top investors.,₹800,img/startup-pitch.jpg,Business
+11,Photography Workshop,2025-07-05,14:00,Goa,Learn professional photography techniques and editing skills.,₹1000,img/photography-workshop.jpg,Education
+12,Fashion Show,2025-08-10,19:00,Mumbai Maharashtra,Showcasing the latest collections from India's top designers.,₹1500,img/fashion-show.jpg,Cultural
+13,Literary Festival,2025-06-20,11:00,Delhi NCR,Meet authors participate in discussions and discover new books.,₹300,img/literary-festival.jpg,Education
+14,Science Exhibition,2025-07-15,09:00,Chennai Tamil Nadu,Interactive displays and demonstrations of scientific concepts and innovations.,₹200,img/science-exhibition.jpg,Education
+15,Film Festival,2025-08-20,18:00,Kolkata West Bengal,Screenings of award-winning Indian and international films.,₹400,img/film-festival.jpg,Cultural
+16,Cooking Masterclass,2025-06-25,13:00,Hyderabad Telangana,Learn to cook authentic Indian cuisines from master chefs.,₹900,img/cooking-masterclass.jpg,Food
+17,Heritage Walk Tour,2025-07-08,09:00,Jaipur Rajasthan,Explore the historical monuments and hidden gems of the city.,₹300,img/heritage-walk.jpg,Cultural
+18,Stand-up Comedy Night,2025-08-05,20:00,Bangalore Karnataka,Laugh out loud with performances by India's top comedians.,₹700,img/comedy-night.jpg,Standup comedies
+19,Career Fair,2025-07-25,10:00,Pune Maharashtra,Meet recruiters from top companies across various industries.,Free,img/career-fair.jpg,Business
+20,Handicraft Exhibition,2025-08-15,11:00,Delhi NCR,Traditional and contemporary handicrafts from different regions of India.,₹100,img/handicraft-exhibition.jpg,Cultural
+21,Marathon for Charity,2025-09-10,06:00,Mumbai Maharashtra,Run for a cause and contribute to social welfare organizations.,₹400,img/marathon.jpg,Sports
+22,Tech Hackathon,2025-05-22,09:00,Bangalore Karnataka,48-hour coding competition to build innovative solutions for real-world problems.,₹500,img/hackathon.jpg,Tech and coding
+23,Classical Dance Performance,2025-07-20,18:30,Chennai Tamil Nadu,An enchanting evening showcasing various classical Indian dance forms.,₹600,img/classical-dance.jpg,Cultural
+24,Wine Tasting Festival,2025-06-18,16:00,Nashik Maharashtra,Sample premium wines from the finest vineyards of India.,₹1500,img/wine-tasting.avif,Food
+25,Investment Workshop,2025-05-30,10:00,Delhi NCR,Learn about smart investment strategies from financial experts.,₹750,img/investment-workshop.png,Business
+26,Football Tournament,2025-08-25,15:00,Kolkata West Bengal,Watch exciting matches between top football teams.,₹250,img/football.jpg,Sports
+27,Pottery Workshop,2025-06-08,11:00,Jaipur Rajasthan,Learn the art of pottery from master craftsmen.,₹800,img/pottery-workshop.jpg,Cultural
+28,Salsa Dancing Class,2025-07-30,19:00,Mumbai Maharashtra,Learn the basics of salsa dancing with professional instructors.,₹600,img/salsa-class.jpeg,Cultural
+29,Spiritual Discourse,2025-05-18,08:00,Varanasi Uttar Pradesh,An enlightening talk on spirituality and mindfulness.,Free,img/spiritual-discourse.webp,Cultural
+30,E-commerce Conference,2025-07-10,09:00,Gurgaon Haryana,Insights into the latest trends and future of e-commerce.,₹1200,img/ecommerce-conference.jpg,Business
+31,Wildlife Photography Exhibition,2025-08-30,10:00,Bangalore Karnataka,Stunning wildlife photographs from across India.,₹150,img/wildlife-photography.webp,Education
+32,Organic Farming Workshop,2025-06-12,09:30,Coimbatore Tamil Nadu,Learn sustainable organic farming techniques.,₹400,img/organic-farming.jpeg,Education
+33,Book Launch Event,2025-07-18,17:00,Delhi NCR,Renowned author releasing their latest novel with book signing session.,Free,img/book-launch.jpeg,Cultural
+34,Vegan Food Festival,2025-05-28,12:00,Pune Maharashtra,Delicious plant-based foods from various cuisines.,₹500,img/vegan-food.jpeg,Food
+35,Digital Marketing Seminar,2025-08-12,10:00,Hyderabad Telangana,Learn effective digital marketing strategies for businesses.,₹900,img/digital-marketing.jpg,Business
+36,Kabaddi Tournament,2025-06-28,16:00,Patna Bihar,Traditional Indian sport competition between state teams.,₹150,img/kabaddi.webp,Sports
+37,Traditional Craft Workshop,2025-09-05,11:00,Ahmedabad Gujarat,Learn traditional crafts like block printing and tie & dye.,₹700,img/craft-workshop.jpeg,Cultural
+38,Jazz Music Night,2025-07-22,20:00,Mumbai Maharashtra,Enjoy soulful jazz music performances by talented musicians.,₹800,img/jazz-night.jpeg,Music
+39,Free Health Check-up Camp,2025-06-02,09:00,Chennai Tamil Nadu,Comprehensive health check-ups by medical professionals.,Free,img/health-camp.jpeg,Education
+40,Real Estate Expo,2025-08-08,10:00,Bangalore Karnataka,Showcasing residential and commercial properties from leading developers.,₹200,img/real-estate-expo.jpeg,Business
+41,Kite Flying Festival,2025-01-14,10:00,Ahmedabad Gujarat,Colorful kites filling the sky during the traditional festival.,Free,img/kite-festival.avif,Cultural
+42,Artificial Intelligence Workshop,2025-07-01,09:30,Bangalore Karnataka,Learn about AI applications and machine learning technologies.,₹1200,img/ai-workshop.jpg,Tech and coding
+43,Fusion Music Concert,2025-08-18,19:00,Delhi NCR,Blend of traditional and contemporary music styles by renowned artists.,₹950,img/fusion-concert.jpeg,Music
+44,Chocolate Making Workshop,2025-06-16,14:00,Mumbai Maharashtra,Learn to make artisanal chocolates from expert chocolatiers.,₹1100,img/chocolate-workshop.jpeg,Food
+45,Startup Funding Summit,2025-09-15,10:00,Hyderabad Telangana,Connect with investors and learn about fundraising strategies.,₹1500,img/funding-summit.jpeg,Business
+46,Badminton Championship,2025-07-28,15:00,Pune Maharashtra,Watch exciting matches between top badminton players.,₹350,img/badminton.jpeg,Sports
+47,Folk Art Exhibition,2025-06-05,10:00,Kolkata West Bengal,Showcasing diverse folk art traditions from across India.,₹200,img/folk-art.jpg,Cultural
+48,Hip Hop Dance Workshop,2025-08-02,16:00,Delhi NCR,Learn urban dance styles from professional choreographers.,₹700,img/hip-hop.jpeg,Cultural
+49,Environmental Awareness Talk,2025-06-08,11:00,Chennai Tamil Nadu,Discussions on environmental conservation and sustainable living.,Free,img/environmental-talk.jpg,Education
+50,E-Sports Tournament,2025-09-20,12:00,Bangalore Karnataka,Competitive gaming event featuring popular e-sports titles.,₹600,img/esports.jpeg,Sports
+51,Tribal Music Festival,2025-07-15,18:00,Ranchi Jharkhand,Celebrating the rich tribal musical heritage of India.,₹400,img/tribal-music.jpeg,Music
+52,Web Development Bootcamp,2025-06-20,09:00,Mumbai Maharashtra,Intensive training program for aspiring web developers.,₹2000,img/web-development.jpeg,Tech and coding
+53,Food Truck Festival,2025-08-22,12:00,Pune Maharashtra,Variety of cuisines served from trendy food trucks.,₹300,img/food-truck.avif,Food
+54,Venture Capital Conference,2025-05-25,10:00,Bangalore Karnataka,Insights into venture capital investment trends and opportunities.,₹1800,img/vc-conference.jpeg,Business
+55,Chess Tournament,2025-07-05,11:00,Chennai Tamil Nadu,Strategic board game competition for players of all levels.,₹250,img/chess.jpeg,Sports
+56,Classical Art Exhibition,2025-09-12,10:00,Delhi NCR,Showcasing masterpieces of classical Indian art forms.,₹300,img/classical-art.jpg,Cultural
+57,Bollywood Dance Workshop,2025-06-28,17:00,Mumbai Maharashtra,Learn popular Bollywood dance moves from industry choreographers.,₹600,img/bollywood-dance.jpg,Cultural
+58,Science and Technology Conference,2025-08-15,09:00,Hyderabad Telangana,Exploring innovations and breakthroughs in science and technology.,₹900,img/science-conference.jpeg,Tech and coding
+59,Community Clean-up Drive,2025-07-12,08:00,Bangalore Karnataka,Join hands to clean up public spaces and promote cleanliness.,Free,img/clean-up-drive.jpg,Cultural
+60,Property Investment Seminar,2025-06-22,11:00,Mumbai Maharashtra,Expert advice on real estate investment strategies.,₹800,img/property-investment.jpeg,Business
+61,Volleyball Tournament,2025-09-08,14:00,Goa,Beach volleyball competition with teams from across the country.,₹200,img/volleyball.avif,Sports
+62,Mosaic Art Workshop,2025-07-25,13:00,Jaipur Rajasthan,Create beautiful mosaic artworks with professional guidance.,₹900,img/mosaic-art.jpg,Cultural
+63,Rock Concert,2025-08-28,20:00,Delhi NCR,Electrifying performances by popular rock bands.,₹1200,img/rock-concert.jpg,Music
+64,Baking Masterclass,2025-06-15,11:00,Bangalore Karnataka,Learn baking techniques from renowned pastry chefs.,₹1100,img/baking-class.webp,Food
+65,Agricultural Expo,2025-09-18,09:00,Chandigarh,Showcasing modern agricultural technologies and practices.,₹150,img/agricultural-expo.jpg,Business
+66,Swimming Competition,2025-07-18,09:00,Mumbai Maharashtra,National level swimming championship with various categories.,₹300,img/swimming.webp,Sports
+67,Traditional Dance Festival,2025-08-10,16:00,Bhubaneswar Odisha,Showcasing diverse traditional dance forms from different states.,₹400,img/traditional-dance.jpg,Cultural
+68,Graphic Design Workshop,2025-06-30,10:00,Delhi NCR,Comprehensive training in graphic design tools and techniques.,₹1000,img/graphic-design.jpeg,Tech and coding
+69,Plant-Based Cooking Class,2025-09-05,12:00,Chennai Tamil Nadu,Learn to prepare nutritious and delicious plant-based meals.,₹800,img/plant-based-cooking.webp,Food
+70,Franchise Business Expo,2025-07-20,10:00,Bangalore Karnataka,Explore franchise opportunities from various industries.,₹500,img/franchise-expo.jpeg,Business
+71,Archery Competition,2025-08-05,14:00,Jaipur Rajasthan,Test your precision and skill in this traditional sport.,₹250,img/archery.jpeg,Sports
+72,Puppet Show Festival,2025-06-18,17:00,Udaipur Rajasthan,Traditional puppet shows narrating folk tales and legends.,₹150,img/puppet-show.jpg,Cultural
+73,Opera Performance,2025-09-15,19:00,Mumbai Maharashtra,World-class opera singers performing classical pieces.,₹1500,img/opera.avif,Music
+74,Cheese Making Workshop,2025-07-08,13:00,Ooty Tamil Nadu,Learn the art of making artisanal cheese varieties.,₹950,img/cheese-making.jpeg,Food
+75,Social Media Marketing Seminar,2025-08-12,10:00,Delhi NCR,Strategies to leverage social media for business growth.,₹1100,img/social-media-marketing.jpg,Business
+76,Table Tennis Tournament,2025-06-25,15:00,Pune Maharashtra,Competitive matches between skilled table tennis players.,₹200,img/table-tennis.jpeg,Sports
+77,Calligraphy Workshop,2025-09-02,11:00,Bangalore Karnataka,Learn the beautiful art of stylized handwriting.,₹700,img/calligraphy.jpg,Cultural
+78,Astronomy Night,2025-07-15,20:00,Ladakh,Stargazing and celestial observations with professional astronomers.,₹600,img/astronomy.webp,Education
+79,Street Food Festival,2025-08-20,11:00,Lucknow Uttar Pradesh,Variety of authentic street foods from across India.,₹400,img/street-food.jpeg,Food
+80,Women Entrepreneurs Meet,2025-06-10,10:00,Mumbai Maharashtra,Networking event for women business owners and professionals.,₹700,img/women-entrepreneurs.jpeg,Business
+81,Cricket Workshop,2025-09-10,09:00,Delhi NCR,Cricket coaching sessions for aspiring players.,₹500,img/cricket-workshop.jpg,Sports
+82,Glass Painting Workshop,2025-07-22,14:00,Chennai Tamil Nadu,Create beautiful art pieces on glass with expert guidance.,₹800,img/glass-painting.jpeg,Cultural
+83,Classical Orchestra Performance,2025-08-15,18:30,Bangalore Karnataka,Symphony orchestra performing classical masterpieces.,₹1000,img/orchestra.jpg,Music
+84,Coffee Tasting Workshop,2025-06-22,11:00,Coorg Karnataka,Sample premium coffee varieties and learn about coffee making.,₹650,img/coffee-tasting.jpg,Food
+85,Supply Chain Management Conference,2025-09-08,09:00,Ahmedabad Gujarat,Latest trends and innovations in supply chain operations.,₹1300,img/supply-chain.jpg,Business
+86,Squash Tournament,2025-07-05,10:00,Mumbai Maharashtra,Fast-paced racquet sport competition with professional players.,₹300,img/squash.jpeg,Sports
+87,Origami Workshop,2025-08-08,15:00,Pune Maharashtra,Learn the Japanese art of paper folding from skilled artists.,₹500,img/origami.jpeg,Cultural
+88,Robotics Workshop,2025-06-15,10:00,Delhi NCR,Hands-on training in building and programming robots.,₹1200,img/robotics.jpeg,Tech and coding
+89,Beer Brewing Workshop,2025-09-12,13:00,Bangalore Karnataka,Learn the craft of brewing artisanal beer varieties.,₹1500,img/beer-brewing.jpeg,Food
+90,Stock Market Workshop,2025-07-25,10:00,Mumbai Maharashtra,Strategies for effective stock market investments.,₹900,img/stock-market.jpg,Business
+91,Horse Riding Workshop,2025-08-18,09:00,Jaipur Rajasthan,Basic horse riding lessons for beginners.,₹1000,img/horse-riding.jpeg,Sports
+92,Mask Making Workshop,2025-06-28,14:00,Kolkata West Bengal,Create decorative masks using various materials and techniques.,₹600,img/mask-making.jpg,Cultural
+93,Country Music Concert,2025-09-20,19:00,Goa,Performances featuring authentic country music styles.,₹800,img/country-music.jpg,Music
+94,Bread Baking Workshop,2025-07-15,11:00,Chennai Tamil Nadu,Master the art of baking different types of bread.,₹700,img/bread-baking.jpeg,Food
+95,Hospitality Industry Conference,2025-08-10,09:00,Delhi NCR,Insights into trends and opportunities in the hospitality sector.,₹1100,img/hospitality-conference.webp,Business
+96,Fencing Competition,2025-06-20,15:00,Bangalore Karnataka,Olympic sport featuring skilled fencers with swords.,₹350,img/fencing.jpeg,Sports
+97,Pottery Painting Workshop,2025-09-05,13:00,Jaipur Rajasthan,Add colorful designs to pre-made ceramic pottery items.,₹600,img/pottery-painting.webp,Cultural
+98,Ethical Hacking Workshop,2025-07-28,10:00,Hyderabad Telangana,Learn cybersecurity techniques and protective measures.,₹1400,img/ethical-hacking.png,Tech and coding
+99,Dessert Making Workshop,2025-08-22,14:00,Mumbai Maharashtra,Create delicious desserts with professional pastry chefs.,₹900,img/dessert-making.webp,Food
+100,Cryptocurrency Investment Seminar,2025-06-30,11:00,Bangalore Karnataka,Understanding digital currencies and blockchain investments.,₹1200,img/cryptocurrency.jpeg,Business

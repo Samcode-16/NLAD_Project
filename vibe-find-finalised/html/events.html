@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Events - Vibefind</title>
+    <link rel="stylesheet" href="../css/events.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/images/logo.png" type="image/png" class="logo-img">
+                <h1>Vibefind</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="create-event.html">Create Event</a></li>
+                    <li><a href="my-events.html">My Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <div class="profile-dropdown">
+                    <img src="../assets/images/default-profile.png" alt="Profile" id="profile-image">
+                    <div class="dropdown-content">
+                        <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a>
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+                <button id="login-btn" class="btn-secondary">Login</button>
+                <button id="signup-btn" class="btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h1>Discover Events That Match Your Vibe</h1>
+                    <p>Browse, filter, and find the perfect events for you</p>
+                </div>
+            </section>
+
+            <div id="featured-event-popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-popup">&times;</span>
+                    <div class="popup-body">
+                        <img src="../assets/images/upcoming-event.jpg" alt="Upcoming Event">
+                        <div class="popup-details">
+                            <div class="event-date">May 28, 2025 • 19:00</div>
+                            <h3>International Yoga Festival</h3>
+                            <div class="event-location"><i class="fas fa-map-marker-alt"></i> Rishikesh, Uttarakhand</div>
+                            <p>Join us for the world-renowned International Yoga Festival. Experience yoga classes, meditation sessions, and cultural performances.</p>
+                            <a href="event-details.html?id=special1" class="btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="filters">
+                <div class="filter-row">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search events...">
+                        <button id="search-btn" class="material-icons">search</button>
+                        </button>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="category-filter">Category</label>
+                        <select id="category-filter">
+                            <option value="">All Categories</option>
+                            <option value="Music">Music</option>
+                            <option value="Cultural">Cultural</option>
+                            <option value="Food">Food & Drink</option>
+                            <option value="Business">Business</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Education">Education</option>
+                            <option value="Tech and coding">Tech and coding</option>
+                            <option value="Standup comedies">Standup comedies</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="location-filter">Location</label>
+                        <select id="location-filter">
+                            <option value="">All Locations</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Bhubaneswar">Bhubaneswar</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Coorg">Coorg</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gurgaon">Gurgaon</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lucknow">Lucknow</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Ooty">Ooty</option>
+                            <option value="Patna">Patna</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Ranchi">Ranchi</option>
+                            <option value="Rishikesh">Rishikesh</option>
+                            <option value="Udaipur">Udaipur</option>
+                            <option value="Varanasi">Varanasi</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter">Date</label>
+                        <select id="date-filter">
+                            <option value="">Any Date</option>
+                            <option value="today">Today</option>
+                            <option value="tomorrow">Tomorrow</option>
+                            <option value="this-week">This Week</option>
+                            <option value="this-weekend">This Weekend</option>
+                            <option value="next-week">Next Week</option>
+                            <option value="this-month">This Month</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-filter">Price</label>
+                        <select id="price-filter">
+                            <option value="">Any Price</option>
+                            <option value="free">Free</option>
+                            <option value="0-500">₹0 - ₹500</option>
+                            <option value="500-1000">₹500 - ₹1000</option>
+                            <option value="1000+">₹1000+</option>
+                        </select>
+                    </div>
+                    <button id="filter-btn" class="btn-primary">Apply Filters</button>
+                    <button id="clear-filters" class="btn-secondary">Clear Filters</button>
+                </div>
+            </section>
+
+            <section class="events-list">
+                <h2>All Events <span id="event-count">(0)</span></h2>
+                <div id="events-grid" class="event-grid">
+                    <!-- Events will be loaded dynamically -->
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                        <p>Loading events...</p>
+                    </div>
+                </div>
+                <div id="no-results" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No events found</h3>
+                    <p>Try adjusting your filters or search criteria</p>
+                </div>
+                <div class="pagination">
+                    <button id="prev-page" class="pagination-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                    <div id="page-numbers" class="page-numbers">
+                        <!-- Page numbers will be added dynamically -->
+                    </div>
+                    <button id="next-page" class="pagination-btn">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vibefind</h3>
+                    <p>Discover events that match your vibe - concerts, workshops, festivals, and more!</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="create-event.html">Create Event</a></li>
+                        <li><a href="my-events.html">My Events</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@vibefind.com</p>
+                    <p>Phone: +91 98765 432XX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vibefind. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="switch-to-signup">Sign up</a></p>
+        </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" required>
+                </div>
+                <div class="form-group captcha-container">
+                    <label>CAPTCHA</label>
+                    <div class="captcha">
+                        <span id="captcha-text"></span>
+                        <button type="button" id="refresh-captcha"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                    <input type="text" id="captcha-input" placeholder="Enter CAPTCHA" required>
+                </div>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+        </div>
+    </div>
+
+    <script src="../js/events.js"></script>
+</body>
+</html>
